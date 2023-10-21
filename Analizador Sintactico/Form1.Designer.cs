@@ -34,6 +34,13 @@
             Token = new ColumnHeader();
             Lexema = new ColumnHeader();
             Número = new ColumnHeader();
+            lvSintactico = new ListView();
+            columnHeader1 = new ColumnHeader();
+            columnHeader2 = new ColumnHeader();
+            columnHeader3 = new ColumnHeader();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
             SuspendLayout();
             // 
             // txtbCodigo
@@ -79,11 +86,67 @@
             Número.Text = "Número";
             Número.Width = 120;
             // 
+            // lvSintactico
+            // 
+            lvSintactico.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3 });
+            lvSintactico.Location = new Point(425, 308);
+            lvSintactico.Name = "lvSintactico";
+            lvSintactico.Size = new Size(363, 130);
+            lvSintactico.TabIndex = 3;
+            lvSintactico.UseCompatibleStateImageBehavior = false;
+            lvSintactico.View = View.Details;
+            // 
+            // columnHeader1
+            // 
+            columnHeader1.Text = "Token";
+            columnHeader1.Width = 120;
+            // 
+            // columnHeader2
+            // 
+            columnHeader2.Text = "Lexema";
+            columnHeader2.Width = 120;
+            // 
+            // columnHeader3
+            // 
+            columnHeader3.Text = "Número";
+            columnHeader3.Width = 120;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(568, 63);
+            label1.Name = "label1";
+            label1.Size = new Size(41, 15);
+            label1.TabIndex = 4;
+            label1.Text = "Lexico";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(568, 290);
+            label2.Name = "label2";
+            label2.Size = new Size(59, 15);
+            label2.TabIndex = 5;
+            label2.Text = "Sintactico";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(165, 19);
+            label3.Name = "label3";
+            label3.Size = new Size(46, 15);
+            label3.TabIndex = 6;
+            label3.Text = "Codigo";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(lvSintactico);
             Controls.Add(lvLexico);
             Controls.Add(btnAnalizar);
             Controls.Add(txtbCodigo);
@@ -101,5 +164,12 @@
         private ColumnHeader Token;
         private ColumnHeader Lexema;
         private ColumnHeader Número;
+        private ListView lvSintactico;
+        private ColumnHeader columnHeader1;
+        private ColumnHeader columnHeader2;
+        private ColumnHeader columnHeader3;
+        private Label label1;
+        private Label label2;
+        private Label label3;
     }
 }

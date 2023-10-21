@@ -253,7 +253,7 @@ namespace Analizador_Sintactico
                                 tipoToken = "Constante";
                                 lexema += c;
                             }
-                            else if(char.IsLetter(c) || c == '_')
+                            else if (char.IsLetter(c) || c == '_')
                             {
                                 tipoToken = "Id";
                                 estado = 1;
@@ -266,18 +266,18 @@ namespace Analizador_Sintactico
                             break;
                     }
 
-                    
+
 
                     indice++;
                 }
                 estado = 0;
-                
+
                 tokens.Add(new Token(lexema, tipoToken, -1));
             }
 
-            foreach(Token t in tokens)
+            foreach (Token t in tokens)
             {
-                if(t.Tipo == "Id")
+                if (t.Tipo == "Id")
                     t.Tipo = ObtenerTipoToken(t.Lexema);
                 t.Numero = ObtenerNumeroToken(t.Tipo);
             }
@@ -287,7 +287,7 @@ namespace Analizador_Sintactico
 
         private static string ObtenerTipoToken(string lexema)
         {
-            switch(lexema)
+            switch (lexema)
             {
                 case "if": return "condicional SI";
                 case "else": return "condicional SINO";
@@ -336,7 +336,7 @@ namespace Analizador_Sintactico
                 case "switch": return 21;
                 case "case": return 22;
                 case "break": return 23;
-                default: return -1; 
+                default: return -1;
             }
         }
 
