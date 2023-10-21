@@ -28,12 +28,78 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            txtbCodigo = new TextBox();
+            btnAnalizar = new Button();
+            lvLexico = new ListView();
+            Token = new ColumnHeader();
+            Lexema = new ColumnHeader();
+            Número = new ColumnHeader();
+            SuspendLayout();
+            // 
+            // txtbCodigo
+            // 
+            txtbCodigo.Location = new Point(12, 37);
+            txtbCodigo.Multiline = true;
+            txtbCodigo.Name = "txtbCodigo";
+            txtbCodigo.Size = new Size(397, 401);
+            txtbCodigo.TabIndex = 0;
+            // 
+            // btnAnalizar
+            // 
+            btnAnalizar.Location = new Point(425, 37);
+            btnAnalizar.Name = "btnAnalizar";
+            btnAnalizar.Size = new Size(112, 23);
+            btnAnalizar.TabIndex = 1;
+            btnAnalizar.Text = "Analizar";
+            btnAnalizar.UseVisualStyleBackColor = true;
+            btnAnalizar.Click += btnAnalizar_Click;
+            // 
+            // lvLexico
+            // 
+            lvLexico.Columns.AddRange(new ColumnHeader[] { Token, Lexema, Número });
+            lvLexico.Location = new Point(425, 81);
+            lvLexico.Name = "lvLexico";
+            lvLexico.Size = new Size(363, 130);
+            lvLexico.TabIndex = 2;
+            lvLexico.UseCompatibleStateImageBehavior = false;
+            lvLexico.View = View.Details;
+            // 
+            // Token
+            // 
+            Token.Text = "Token";
+            Token.Width = 120;
+            // 
+            // Lexema
+            // 
+            Lexema.Text = "Lexema";
+            Lexema.Width = 120;
+            // 
+            // Número
+            // 
+            Número.Text = "Número";
+            Número.Width = 120;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(lvLexico);
+            Controls.Add(btnAnalizar);
+            Controls.Add(txtbCodigo);
+            Name = "Form1";
+            Text = "Form1";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private TextBox txtbCodigo;
+        private Button btnAnalizar;
+        private ListView lvLexico;
+        private ColumnHeader Token;
+        private ColumnHeader Lexema;
+        private ColumnHeader Número;
     }
 }
